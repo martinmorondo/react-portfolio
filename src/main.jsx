@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
-import { LanguagesProvider } from './context/LanguagesContext'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
+import App from './App';
+import "bootstrap/dist/css/bootstrap.min.css";
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LanguagesProvider>
+    <HelmetProvider>
     <App />
-    </LanguagesProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 )

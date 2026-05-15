@@ -1,3 +1,57 @@
+/* =========================================
+   ESTILOS GENERALES DEL HEADER
+   ========================================= */
+.glass-header {
+    background: rgba(13, 14, 14, 0.7) !important; /* Fondo semi-transparente */
+    backdrop-filter: blur(12px); /* El efecto de desenfoque mágico */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea sutil de separación */
+    padding: 15px 30px !important; /* Más espacio para respirar */
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    font-family: 'Marcellus', serif !important;
+    letter-spacing: 1px;
+}
+
+.modern-nav-link {
+    position: relative;
+    color: #e2e8f0 !important; /* Blanco ligeramente apagado para no cansar la vista */
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.modern-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #e50914; /* Rojo característico de tu diseño */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Cuando pasas el mouse O cuando la página está activa, la línea se expande al 100% */
+.modern-nav-link:hover::after,
+.active-link::after {
+    width: 100%;
+}
+
+/* Resaltar el texto al pasar el mouse */
+.modern-nav-link:hover,
+.active-link {
+    color: #ffffff !important;
+}
+
 .site-header {
     top: 10px;
     padding-left: 10px;
@@ -29,24 +83,10 @@
     }
 }
 
-/* new navbar */
-.nav {
-    height: 1.5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    column-gap: 1rem;
-}
-
-.nav-list {
-    display: flex;
-    column-gap: 2rem;
-}
-
+/* =========================================
+   MENÚ ESCRITORIO (NUEVO)
+   ========================================= */
 .nav-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-size: 1rem;
     color: #fff;
     font-weight: bold;
@@ -58,29 +98,9 @@
     color: red;
 }
 
-@media screen and (max-width: 479px) {
-    .nav-menu {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    
-    .nav-menu {
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
-    }
-}
-
-/* final navbar*/
-
+/* =========================================
+   BOTÓN HAMBURGUESA Y BORDES
+   ========================================= */
 .nav-ac {
     padding: 5px 15px;
     margin: 0;
@@ -136,15 +156,9 @@
     height: 100%;
 }
 
-.cortina-wrapper-menu {
-    position: relative;
-    width: 100%;
-    padding-top: 5em;
-    padding-bottom: 3em;
-    height: 100%;
-    overflow-y: auto;
-}
-
+/* =========================================
+   MENÚ DESPLEGABLE MÓVIL (PANTALLA COMPLETA)
+   ========================================= */
 .site-navigation {
     height: 100%;
     left: 0;
@@ -153,43 +167,11 @@
     top: 0;
     width: 100%;
     visibility: hidden;
+    z-index: 999;
 }
 
 .menu-opend {
     visibility: visible !important;
-}
-
-.main-menu-ul,
-.menu-right {
-    opacity: 0;
-    position: relative;
-    transition: 0.5s;
-    transition-delay: 0s;
-    visibility: hidden;
-    z-index: 100;
-}
-
-.menu-right {
-    text-align: center;
-}
-
-.site-navigation.menu-opend .main-menu-ul,
-.site-navigation.menu-opend .menu-right {
-    opacity: 1;
-    transition-delay: 0.6s;
-    visibility: visible;
-}
-
-.site-navigation .main-menu-ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.site-navigation .main-menu-ul li a {
-    color: var(--text-color);
-    display: block;
-    font-size: 2.5rem;
-    text-decoration: none;
 }
 
 .bg-menu {
@@ -219,21 +201,20 @@
     padding-top: 20vh;
     padding-bottom: 20vh;
     padding-left: 0;
+    list-style: none;
 }
 
 @media (min-width: 992px) {
-
     .menu-container {
         margin-left: 33.3333%;
     }
-
     .the-menu {
         padding-top: 10vh;
         padding-bottom: 10vh;
     }
 }
 
-.the-menu .menu-item>a {
+.the-menu .menu-item > a {
     color: var(--text-color-2);
     font-weight: bold;
     line-height: 1;
@@ -246,12 +227,12 @@
     font-family: Marcellus;
 }
 
-.the-menu .menu-item>a:hover {
+.the-menu .menu-item > a:hover {
     color: var(--text-color-3);
 }
 
 @media (min-width: 768px) {
-    .the-menu .menu-item>a {
+    .the-menu .menu-item > a {
         font-size: 4.8vw;
     }
 }
@@ -269,53 +250,20 @@
     text-decoration: none;
 }
 
-.languages-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .btn-es, .btn-us {
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.75rem 1rem;
-    /* margin: 0 0.5rem; */
-    margin-top: -50px;
-    cursor: pointer;
-  }
-  
-  .btn-es {
-    background-color: transparent; 
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_First_Spanish_Republic.svg/2560px-Flag_of_the_First_Spanish_Republic.svg.png');
-    background-size: 30px 20px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px 10px 50px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn-us {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Flag_of_the_United_States_%281863-1865%29.svg/2560px-Flag_of_the_United_States_%281863-1865%29.svg.png');
-    background-size: 30px 20px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    border: none;
-    font-size: 16px;
-    color: transparent;
-    background-color: transparent;
-    font-weight: bold;
-    padding: 10px 20px 10px 50px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+/* =========================================
+   MEDIA QUERIES DE RESPONSIVIDAD (ESCRITORIO VS MÓVIL)
+   ========================================= */
+
+/* Ocultar el botón hamburguesa en pantallas grandes (Escritorio) */
+@media screen and (min-width: 769px) {
+    .mobile-toggle {
+        display: none !important;
+    }
+}
+
+/* Ocultar el menú horizontal en pantallas pequeñas (Celulares) */
+@media screen and (max-width: 768px) {
+    .desktop-menu {
+        display: none !important;
+    }
+}

@@ -1,23 +1,23 @@
 import React, { useEffect } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
   useLocation,
 } from "react-router-dom";
-import withRouter from "./hooks/withRouter";
+
 import AppRoutes from "./routes";
-import Header from './components/header/header';
+import Header from './components/header/Header';
 import AnimatedCursor from "./hooks/AnimatedCursor";
 import './App.css';
 
-function _ScrollToTop(props) {
+function ScrollToTop({ children }) {
   const { pathname } = useLocation();
+  
   useEffect(() => {
-    window.scrollTo(0 , 0);
+    window.scrollTo(0, 0);
   }, [pathname]);
-  return props.children;
-  }
-const ScrollToTop = withRouter(_ScrollToTop);
+  
+  return children;
+}
 
 export default function App() {
   return (
@@ -37,6 +37,6 @@ export default function App() {
         <AppRoutes />
       </ScrollToTop>
     </Router>
-  )
+  );
 }
 

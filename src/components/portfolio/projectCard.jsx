@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import {BiLinkExternal } from 'react-icons/bi';
-import { GoMarkGithub } from "react-icons/go";
+import { SiGithub } from "react-icons/si";
 import { IconContext } from "react-icons";
-import { LanguagesContext } from '../../context/LanguagesContext';
-import { FormattedMessage } from "react-intl";
 import {
     LinkName,
     ProjectCard,
@@ -24,42 +22,40 @@ import {
     liveLink,
   }) => 
   {
-
-  const { changeLangToEs, changeLangToEn } = useContext(LanguagesContext);
-
     return (
-        <>
-            <IconContext.Provider value={{ size: "1rem" }}>
-            <ProjectCard>
-          <ProjectImage src={image} alt={title} />
-          <ProjectTransitionImage src={transitionImage} alt={title} />
-          <ProjectDetails>
-            <ProjectTitle>{title}</ProjectTitle>
-            <ProjectCodeLink
-              href={codeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GoMarkGithub />
-              <LinkName>
-                <FormattedMessage id="project-code" defaultMessage="Github" />               
-              </LinkName>
-            </ProjectCodeLink>
-            <ProjectLiveLink
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BiLinkExternal />
-              <LinkName>
-                <FormattedMessage id="project-site" defaultMessage="Sitio" />                             
-              </LinkName>
-            </ProjectLiveLink>
-          </ProjectDetails>
-        </ProjectCard>
-            </IconContext.Provider>
-        </>
-    );
-  };
+    <IconContext.Provider value={{ size: "1rem" }}>
+      <ProjectCard>
+        <ProjectImage src={image} alt={`Vista previa del proyecto ${title}`} />
+        <ProjectTransitionImage src={transitionImage} alt={`Animación del proyecto ${title}`} />
+        
+        <ProjectDetails>
+          <ProjectTitle>{title}</ProjectTitle>
+          
+          <ProjectCodeLink
+            href={codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiGithub /> 
+            <LinkName>
+              GitHub
+            </LinkName>
+          </ProjectCodeLink>
+          
+          <ProjectLiveLink
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BiLinkExternal />
+            <LinkName>
+              Sitio Web
+            </LinkName>
+          </ProjectLiveLink>
+        </ProjectDetails>
+      </ProjectCard>
+    </IconContext.Provider>
+  );
+};
 
   export default ProjectCardComponent;

@@ -16,34 +16,34 @@ export const Socialicons = (params) => {
       <ul>
         {socialProfiles.twitter && (
           <li>
-            <a href={socialProfiles.twitter} target="_blank">
+            <a href={socialProfiles.twitter} target="_blank" rel="noopener noreferrer">
               <FaTwitter />
             </a>
           </li>
         )}
         {socialProfiles.github && (
           <li>
-            <a href={socialProfiles.github} target="_blank">
+            <a href={socialProfiles.github} target="_blank" rel="noopener noreferrer" rel="noopener noreferrer">
               <FaGithub />
             </a>
           </li>
         )}
         {socialProfiles.facebook && (
           <li>
-            <a href={socialProfiles.facebook} target="_blank">
+            <a href={socialProfiles.facebook} target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
           </li>
         )}
         {socialProfiles.linkedin && (
           <li>
-            <a href={socialProfiles.linkedin} target="_blank">
+            <a href={socialProfiles.linkedin} target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
           </li>
         )}
       </ul>
-      <p>Follow Me</p>
+      <p>Seguime</p>
     </div>
   );
 };
