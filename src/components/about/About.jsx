@@ -4,11 +4,18 @@ import {
   SectionTitle,  
 } from './SectionHeading';
 import { 
+  AboutSection,
   AboutContent, 
   AboutDetailsContainer,  
   ResumeLink,
   AboutImageContainer, 
-  AboutImage 
+  AboutImage,
+  TechContainer,
+  TechTitle,
+  TechGrid,
+  TechCard,
+  TechIcon,
+  TechName 
 } from './About.styled';
 import {
   StyledParagraph
@@ -17,11 +24,32 @@ import {
 import profileImg from '../../assets/img/profilee.jpg';
 import resume from '../../assets/img/CV_MartinMorondo.pdf';
 
+import { 
+  SiHtml5, 
+  SiCss3, 
+  SiJavascript, 
+  SiReact, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiPython 
+} from "react-icons/si";
+
+// Lista de tecnologías con sus colores oficiales
+const mySkills = [
+  { name: 'HTML5', icon: <SiHtml5 color="#E34F26" /> },
+  { name: 'CSS3', icon: <SiCss3 color="#1572B6" /> },
+  { name: 'JavaScript', icon: <SiJavascript color="#F7DF1E" /> },
+  { name: 'React', icon: <SiReact color="#61DAFB" /> },
+  { name: 'Node.js', icon: <SiNodedotjs color="#339933" /> },
+  { name: 'Express', icon: <SiExpress color="#FFFFFF" /> },
+  { name: 'Python', icon: <SiPython color="#3776AB" /> },
+];
+
 export const About = () => {
   return (
-    <>
+    <AboutSection id="about">
       <SectionHeading dark="true" mb="3rem">
-        <SectionTitle dark="true" number="01"> {/* Agregado el número aquí */}
+        <SectionTitle dark="true" number="01"> 
           Sobre mí
         </SectionTitle>
       </SectionHeading>
@@ -47,10 +75,19 @@ export const About = () => {
         </AboutDetailsContainer>
       </AboutContent>
 
-      {/* <TechnologiesHeader>
-        Tecnologías y Herramientas
-      </TechnologiesHeader> */}
-    </>
+      {/* Stack Tecnológico Dinámico */}
+      <TechContainer>
+        <TechTitle>Mi Stack Tecnológico</TechTitle>
+        <TechGrid>
+          {mySkills.map((tech, index) => (
+            <TechCard key={index}>
+              <TechIcon>{tech.icon}</TechIcon>
+              <TechName>{tech.name}</TechName>
+            </TechCard>
+          ))}
+        </TechGrid>
+      </TechContainer>
+    </AboutSection>
   );
 };
 

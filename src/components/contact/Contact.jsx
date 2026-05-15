@@ -5,6 +5,8 @@ import emailjs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.min.css';
 import './contact.css';
 
+import { SectionHeading, SectionTitle } from '../about/SectionHeading';
+
 export const Contact = () => {
   const {
     register,
@@ -60,7 +62,6 @@ const [disabled, setDisabled] = useState(false);
         autoClose: 5000,
       });
     } finally {
-      // Se ejecuta siempre, ya sea éxito o error
       setDisabled(false);
     }
   };
@@ -68,6 +69,13 @@ const [disabled, setDisabled] = useState(false);
   return (
     <div className='ContactForm'>
       <div className='container'>
+
+        <SectionHeading dark="true" mb="3rem">
+          <SectionTitle dark="true" number="03">
+            Contacto
+          </SectionTitle>
+        </SectionHeading>
+
         <div className='row'>
           <div className='col-12 text-center'>
             <div className='contactForm'>
@@ -75,7 +83,7 @@ const [disabled, setDisabled] = useState(false);
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                 {/* Fila 1 */}
                 <div className='row formRow'>
-                  <div className='col-6'>
+                  <div className='col-12 col-md-6 mb-3 mb-md-0'>
                     <input
                       type='text'
                       name='name'
@@ -94,7 +102,7 @@ const [disabled, setDisabled] = useState(false);
                     />
                     {errors.name && <span className='errorMessage'>{errors.name.message}</span>}
                   </div>
-                  <div className='col-6'>
+                  <div className='col-12 col-md-6'>
                     <input
                       type='email'
                       name='email'
@@ -143,7 +151,7 @@ const [disabled, setDisabled] = useState(false);
                 <div className='row formRow'>
                   <div className='col'>
                     <textarea
-                      rows={3}
+                      rows={5}
                       name='message'
                       {...register('message', {
                         required: 'Por favor, escribe un mensaje'

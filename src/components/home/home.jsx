@@ -25,7 +25,7 @@ export const Home = () => {
               <div className="intro mx-auto">
                 <h2 className="mb-1x">Martín Morondo</h2>
 
-                <h1 className="fluidz-48 mb-1x">
+                <h1 className="mb-1x typewriter-text">
                   <Typewriter
                     options={{
                       strings: [
@@ -45,20 +45,12 @@ export const Home = () => {
               </p>
 
                 <div className="intro-btn-action pb-5">
-                  <Link to="/portfolio" className="text-2 button-p ac-btn btn btn-10">
-                    <span>Portfolio</span>
-                    <div className="ring one"></div>
-                    <div className="ring two"></div>
-                    <div className="ring three"></div>
+                  <Link to="/portfolio" className="custom-btn primary-btn text-decoration-none">
+                    Portfolio
                   </Link>
 
-                  <Link to="/contact">
-                    <div className="button-p ac-btn btn btn-91">
-                      <span>Contacto</span>
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
+                  <Link to="/contact" className="custom-btn secondary-btn text-decoration-none">
+                    Contacto
                   </Link>
                 </div>
               </div>

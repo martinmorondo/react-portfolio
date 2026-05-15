@@ -6,11 +6,11 @@ const meta = {
 };
 
 const introData = {
-    title: "I'm Martin Morondo",
+    title: "Soy Martín Morondo",
     animated: {
-        first: "I love coding 🖥️",
-        second: "I code cool websites 🧑‍💻",
-        third: "I develop web pages 💻",
+        first: "Me encanta programar",
+        second: "Creo sitios web increíbles",
+        third: "Desarrollo páginas web",
     },
     your_img_url: "https://github.com/martinmorondo/react-portfolio/blob/main/src/assets/img/profile.png?raw=true",
 };

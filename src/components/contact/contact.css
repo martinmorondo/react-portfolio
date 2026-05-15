@@ -1,115 +1,133 @@
-body {
-  background-color: #0c0c0c;
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+.ContactForm {
+    padding-top: 130px; 
+    padding-bottom: 80px;
+    min-height: 100vh;
 }
 
-h1 {
-  margin-bottom: 2rem;
-}
-
+/* =========================================
+   FORMULARIO DE CONTACTO 
+   ========================================= */
 form {
-  margin-top: 20px;
-  background: var(--dark);
+    margin-top: 30px;
+    background: transparent;
 }
 
 .formRow {
-  margin: 10px 0 20px 0;
+    margin-bottom: 25px;
 }
 
+/* =========================================
+   INPUTS Y TEXTAREA
+   ========================================= */
 .formInput {
-  padding: 15px 10px;
-  background-color: black;
-  box-shadow: 0 0 0 2px green;
-  border: none;
-  color: green;
-}
-
-.formInput:focus {
-  background-color: black;
-  outline: none;
-  box-shadow: 0 0 0 2px green;
-  color: #fff;
+    width: 100%;
+    padding: 16px 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .formInput::placeholder {
-  color: green;
-  opacity: 1;
+    color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.formInput:focus {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    outline: none !important;
+    border: 1px solid #e50914 !important; 
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.3) !important; 
+    color: #ffffff !important;
 }
 
 .formInput:focus::placeholder {
-  color: var(--light);
-  opacity: 1;
+    opacity: 0.5;
+    transform: translateX(5px); 
 }
 
+/* =========================================
+   MENSAJES DE ERROR Y NOTIFICACIONES
+   ========================================= */
+
 .errorMessage {
-  color: #f45532;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
+    color: #e50914; 
+    font-size: 0.85rem;
+    margin-top: 8px;
+    padding-left: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 #notifyToast {
-  color: #fff;
-  border-radius: 6px;
-  width: 200px;
-  margin-left: 75px;
-  background-color: var(--green);
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background-color: rgba(20, 20, 20, 0.95);
+    border: 1px solid #28a745; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
+
+/* =========================================
+   BOTÓN DE ENVIAR
+   ========================================= */
 
 .submit-btn {
-  background-color: black;
-  color: green !important;
-  padding: 15px 50px;
-  border: 2px solid green;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  transition: .3s;
+    display: inline-block;
+    background-color: #e50914; 
+    color: #ffffff !important;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px; 
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
 }
 
 .submit-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white !important;
-  border: 2px solid green;
-  font-weight: bold;
-  transform: scale(1.1);
+    background-color: #b80710;
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 25px rgba(229, 9, 20, 0.5);
 }
 
-.submit-btn:disabled:hover {
-  background-color: black;
-  color: green !important;
-  cursor: wait;
+.submit-btn:disabled {
+    background-color: #333333;
+    color: #888888 !important;
+    box-shadow: none;
+    cursor: wait;
+    transform: none;
 }
+
+/* =========================================
+   RESPONSIVIDAD (MÓVILES)
+   ========================================= */
 
 @media (max-width: 768px) {
-  .submit-message {
-    width: 125px;
-    margin-left: 200px;
-  }
+    .submit-btn {
+        width: 100%; 
+    }
+    
+    .formInput {
+        padding: 14px 15px;
+    }
 }
 
 
-.subtmit-btn {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-}
 
-.submit-btn:hover {
-  background: #111;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 20px #03e9f4,
-              0 0 30px #03e9f4,
-              0 0 50px #03e9f4;
-}
 
 
 
