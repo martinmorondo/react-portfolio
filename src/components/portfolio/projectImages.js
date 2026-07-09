@@ -6,10 +6,10 @@ import project2 from "../../assets/img/web-page (1).png";
 import projectTwo from "../../assets/img/web-page-22.png";
 import project3 from "../../assets/img/puzzle-messi.jpeg";
 import projectThree from "../../assets/img/Puzzle.jpeg";
-import project4 from "../../assets/img/movie-app.png";
-import projectFour from "../../assets/img/movie-app-2.png";
-import project5 from "../../assets/img/lista-de-tareas.jpeg";
-import projectFive from "../../assets/img/lista-tareas.png";
+// import project4 from "../../assets/img/movie-app.png";
+// import projectFour from "../../assets/img/movie-app-2.png";
+// import project5 from "../../assets/img/lista-de-tareas.jpeg";
+// import projectFive from "../../assets/img/lista-tareas.png";
 import project6 from "../../assets/img/ecommerce.jpg";
 import projectSix from "../../assets/img/ecommerce-2.png";
 import project7 from "../../assets/img/weather-app-2.png";
@@ -45,10 +45,6 @@ export {
     projectTwo,
     project3,
     projectThree,
-    project4,
-    projectFour,
-    project5,
-    projectFive,
     project6,
     projectSix,
     project7,

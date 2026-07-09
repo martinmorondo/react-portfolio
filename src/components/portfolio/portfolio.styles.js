@@ -7,7 +7,7 @@ export const HoverStyle = css`
     right: 0;
     left: 0;
     width: 0;
-    height: 0.7px;
+    height: 1px;
     background: #fff;
     transition: 0.3s ease-in-out;
 `;
@@ -21,41 +21,7 @@ export const Flex = css`
 export const StyledProjects = styled.section`
   background-color: #0c0c0c;;
   color: #111;
-  //background-image: url(https://pbs.twimg.com/media/C_dCWd5WsAAGYKI?format=jpg&name=4096x4096);
-  //background-repeat: no-repeat;
-  // background-size: cover;
-`;
-
-export const SectionHeading = styled.div`
-  text-align: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-`;
-
-export const SectionTitle = styled.h2`
-  margin-bottom: 25px;
-  position: relative;
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: capitalize;
-  z-index: 1;
-  color: white;
-  display: inline-block;
-  text-shadow: 0px 0px 8px red;
-
-  &::after {
-    position: absolute;
-    content: "${(props) => props.number}";
-    left: 5%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: ${(props) =>
-      props.dark ? "rgba(29, 28, 28, 0.2)" : "rgba(0, 0, 0, 0.06)"};
-    z-index: -1;
-    font-size: 8rem;
+  padding: 4rem 0;
 `;
 
 export const StyledParagraph = styled.p`
@@ -67,7 +33,13 @@ export const StyledParagraph = styled.p`
 `;
 
 export const StyledLink = styled.a`
-  color: #4353ff;
+  color: #ff3333;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ff6666;
+  }
 
   @media all and (max-width: 58.125rem) {
     display: block;
@@ -79,8 +51,9 @@ export const ProjectsContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 2rem;
   margin-top: 3rem;
+  padding: 0 1rem;
 `;
 
 export const ProjectImage = styled.img`
@@ -96,79 +69,79 @@ export const ProjectTransitionImage = styled.img`
   opacity: 0;
   object-fit: cover;
   position: absolute;
-  transition: 0.3s ease;
+  top: 0;
+  left: 0;
+  transition: 0.4s ease;
 `;
 
 export const ProjectDetails = styled.div`
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 5rem 3rem;
+  inset: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Espacio entre el título y los botones */
   color: #fff;
   background: linear-gradient(
     180deg,
-    transparent,
-    rgba(13, 14, 14, 0.97),
-    rgba(0, 0, 0, 0.9)
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.95) 100%
   );
   transform: translateY(100%);
   opacity: 0;
   pointer-events: none;
-  transition: 0.6s ease;
-  margin-top: 2rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto de entrada con un pequeño rebote */
   z-index: 5;
+  padding: 1rem;
+  text-align: center;
 `;
 
-export const ProjectTitle = styled.span``;
+export const ProjectTitle = styled.h3`
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+`;
 
 export const LinkName = styled.span``;
 
-export const ProjectCodeLink = styled.a`
-  position: absolute;
-  bottom: 2rem;
-  left: 9rem;
-  color: #fff;
-  font-size: 14px;
-  ${Flex}
-
-  ${LinkName}::after {
-    ${HoverStyle}
-  }
-
-  ${LinkName}:hover::after {
-    width: 100%;
-  }
+export const ProjectLinksContainer = styled.div`
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const ProjectLiveLink = styled.a`
-  position: absolute;
-  bottom: 2rem;
-  left: 3rem;
+/* Unificamos ProjectCodeLink y ProjectLiveLink en un solo componente reutilizable */
+export const ProjectLink = styled.a`
   color: #fff;
   font-size: 14px;
   ${Flex}
+  position: relative;
+  text-decoration: none;
 
   ${LinkName}::after {
     ${HoverStyle}
   }
 
-  ${LinkName}:hover::after {
+  &:hover ${LinkName}::after {
     width: 100%;
   }
 `;
 
 export const ProjectCard = styled.article`
   background: #fff;
-  width: 325px;            // 26rem
-  height: 155px;            // 20rem
+  width: 340px;            
+  height: 220px;           
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &::after {
     content: "";
@@ -179,7 +152,8 @@ export const ProjectCard = styled.article`
   }
 
   &:hover {
-    box-shadow: 0 2px 15px rgba(13, 14, 14) 15%;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(255, 0, 0, 0.15);
   }
 
   &:hover ${ProjectDetails} {
@@ -198,6 +172,7 @@ export const ProjectCard = styled.article`
   
   @media all and (max-width: 58.125rem) {
     width: 100%;
+    max-width: 400px;
   }
 `;
 

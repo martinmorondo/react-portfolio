@@ -5,12 +5,12 @@ import { IconContext } from "react-icons";
 import {
     LinkName,
     ProjectCard,
-    ProjectCodeLink,
     ProjectDetails,
     ProjectImage,
-    ProjectLiveLink,
-    ProjectTitle,
     ProjectTransitionImage,
+    ProjectTitle,
+    ProjectLinksContainer,
+    ProjectLink,
   } from './portfolio.styles';
 
 
@@ -23,35 +23,42 @@ import {
   }) => 
   {
     return (
-    <IconContext.Provider value={{ size: "1rem" }}>
+    <IconContext.Provider value={{ size: "1.2rem" }}>
       <ProjectCard>
-        <ProjectImage src={image} alt={`Vista previa del proyecto ${title}`} />
-        <ProjectTransitionImage src={transitionImage} alt={`Animación del proyecto ${title}`} />
+        <ProjectImage src={image} alt={`Vista previa del proyecto ${title}`} loading="lazy" />
+        <ProjectTransitionImage src={transitionImage} alt={`Animación del proyecto ${title}`} loading="lazy" />
         
         <ProjectDetails>
           <ProjectTitle>{title}</ProjectTitle>
           
-          <ProjectCodeLink
-            href={codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SiGithub /> 
-            <LinkName>
-              GitHub
-            </LinkName>
-          </ProjectCodeLink>
-          
-          <ProjectLiveLink
-            href={liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ProjectLinksContainer>
+            {/* Renderizado condicional en caso de que algún proyecto no tenga link de Github */}
+            {codeLink && (
+              <ProjectLink
+                href={codeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiGithub /> 
+                <LinkName>GitHub</LinkName>
+              </ProjectLink>
+            )}
+            
+            {/* Renderizado condicional en caso de que algún proyecto no esté deployado */}
+            {liveLink && (
+              <ProjectLink
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
             <BiLinkExternal />
             <LinkName>
               Sitio Web
             </LinkName>
-          </ProjectLiveLink>
+          </ProjectLink>
+          )}
+          </ProjectLinksContainer>
+
         </ProjectDetails>
       </ProjectCard>
     </IconContext.Provider>

@@ -195,5 +195,94 @@ export const TechName = styled.span`
   pointer-events: none;
   letter-spacing: 1px;
 `;
+
+/* =========================================
+   4. SECCIÓN: EDUCACIÓN
+   ========================================= */
+   export const EducationContainer = styled(TechContainer)`
+   margin-top: 5rem;
+   margin-bottom: 3rem;
+   max-width: 1000px;
+ `;
+ 
+ export const EducationTitle = styled(TechTitle)``;
+ 
+ export const EducationGrid = styled.div`
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 2rem;
+   width: 100%;
+   padding: 0 1rem;
+ `;
+ 
+ export const EducationCard = styled.div`
+   background: rgba(255, 255, 255, 0.02);
+   border: 1px solid ${(props) => (props.finished ? 'rgba(229, 9, 20, 0.3)' : 'rgba(255, 255, 255, 0.08)')};
+   border-radius: 16px;
+   padding: 2rem 1.5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+ 
+   /* Brillo sutil de fondo si la carrera está finalizada */
+   &::before {
+     content: '';
+     position: absolute;
+     top: 0; left: 0; right: 0; bottom: 0;
+     background: ${(props) => (props.finished ? 'radial-gradient(circle at top right, rgba(229,9,20,0.1), transparent 70%)' : 'none')};
+     pointer-events: none;
+   }
+ 
+   &:hover {
+     background: rgba(255, 255, 255, 0.05);
+     border-color: #e50914;
+     transform: translateY(-5px);
+     box-shadow: 0 10px 25px rgba(229, 9, 20, 0.15);
+   }
+ `;
+ 
+ export const EduIconWrapper = styled.div`
+   font-size: 2rem;
+   color: ${(props) => (props.finished ? '#e50914' : '#aaaaaa')};
+   margin-bottom: 1.2rem;
+   transition: color 0.3s ease;
+ 
+   ${EducationCard}:hover & {
+     color: #e50914;
+   }
+ `;
+ 
+ export const EduTitle = styled.h4`
+   font-size: 1.2rem;
+   color: #ffffff;
+   font-weight: 700;
+   margin-bottom: 0.5rem;
+   line-height: 1.3;
+   font-family: 'Segoe UI', Roboto, sans-serif;
+ `;
+ 
+ export const EduInstitution = styled.span`
+   font-size: 0.95rem;
+   color: #cccccc;
+   font-weight: 500;
+   margin-bottom: 1.5rem;
+ `;
+ 
+ export const EduStatus = styled.span`
+   display: inline-block;
+   padding: 6px 14px;
+   background: ${(props) => (props.finished ? 'rgba(229, 9, 20, 0.15)' : 'rgba(255, 255, 255, 0.05)')};
+   color: ${(props) => (props.finished ? '#ff4d4d' : '#aaaaaa')};
+   border: 1px solid ${(props) => (props.finished ? 'rgba(229, 9, 20, 0.3)' : 'rgba(255, 255, 255, 0.1)')};
+   border-radius: 50px;
+   font-size: 0.8rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+   margin-top: auto; /* Empuja el status al fondo de la tarjeta */
+ `;
 ;
 

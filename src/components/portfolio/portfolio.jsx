@@ -1,8 +1,9 @@
 import React from 'react';
+
+import { SectionHeading, SectionTitle } from '../about/SectionHeading';
+
 import { 
   StyledProjects, 
-  SectionHeading, 
-  SectionTitle, 
   StyledParagraph, 
   StyledLink, 
   ProjectsContainer 
@@ -13,8 +14,8 @@ import ProjectCardComponent from './projectCard.jsx';
 export const Portfolio = () => {
     return (
     <StyledProjects id="projects">
-      <SectionHeading>
-        <SectionTitle>
+      <SectionHeading dark="true" mb="3rem">
+        <SectionTitle number="02" dark="true">
           Proyectos
         </SectionTitle>
       </SectionHeading>
