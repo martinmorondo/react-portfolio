@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 
 import AppRoutes from "./routes";
-import Header from './components/header/Header.jsx';
+import Header from './components/header/Header';
 import AnimatedCursor from "./hooks/AnimatedCursor";
 import './App.css';
 
