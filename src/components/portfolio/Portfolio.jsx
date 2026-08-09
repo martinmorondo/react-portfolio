@@ -10,8 +10,8 @@ import {
   StyledLink, 
   ProjectsContainer 
 } from './portfolio.styles';
-import { projectData } from './portfolioData.jsx';
-import ProjectCardComponent from './projectCard.jsx';
+import { projectData } from './PortfolioData.jsx';
+import ProjectCardComponent from './ProjectCard.jsx';
 
 export const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
