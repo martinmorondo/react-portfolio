@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./components/home/Home";
 import { About } from './components/about/About';
-import { Portfolio } from "./components/portfolio/portfolio";
+import { Portfolio } from "./components/portfolio/Portfolio";
 import { Contact } from './components/contact/Contact';
 import { Socialicons } from "./components/socialIcons/icons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
