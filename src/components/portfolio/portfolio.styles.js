@@ -81,26 +81,52 @@ export const ProjectDetails = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem; /* Espacio entre el título y los botones */
+  gap: 0.8rem; /* Redujimos el gap para que entre todo el contenido sin saturar */
   color: #fff;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.95) 100%
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.98) 100%
   );
   transform: translateY(100%);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto de entrada con un pequeño rebote */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 5;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
 `;
 
 export const ProjectTitle = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   margin: 0;
+  color: #fff;
+`;
+
+/* Estilo de la descripción */
+export const ProjectDescription = styled.p`
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  margin: 0;
+  
+  /* Truco de CSS para limitar el texto a 3 líneas y poner "..." si se pasa */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+`;
+
+/* Contenedor del Stack Tecnológico */
+export const ProjectStack = styled.div`
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem 0 0.5rem 0;
+  font-size: 1.3rem; /* Tamaño de los iconos del stack */
+  color: #e50914; /* Color rojo de tu marca */
 `;
 
 export const LinkName = styled.span``;
@@ -110,6 +136,7 @@ export const ProjectLinksContainer = styled.div`
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
+  margin-top: 0.5rem; /* Separamos un poquito los botones del stack */
 `;
 
 /* Unificamos ProjectCodeLink y ProjectLiveLink en un solo componente reutilizable */

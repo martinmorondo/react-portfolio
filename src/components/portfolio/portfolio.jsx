@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from "react";
+import { ProjectModal } from "./ProjectModal";
 
 import { SectionHeading, SectionTitle } from '../about/SectionHeading';
 
@@ -8,10 +10,11 @@ import {
   StyledLink, 
   ProjectsContainer 
 } from './portfolio.styles';
-import { projectData } from './portfolioData.js';
+import { projectData } from './portfolioData.jsx';
 import ProjectCardComponent from './projectCard.jsx';
 
 export const Portfolio = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
     return (
     <StyledProjects id="projects">
       <SectionHeading dark="true" mb="3rem">
@@ -33,9 +36,18 @@ export const Portfolio = () => {
       
       <ProjectsContainer>
         {projectData.map((project) => (
-          <ProjectCardComponent key={project.id} {...project} />
+          <ProjectCardComponent 
+             key={project.id} 
+             {...project} 
+             onOpenModal={() => setSelectedProject(project)} // Pasamos la función
+          />
         ))}
       </ProjectsContainer>
+
+      <ProjectModal 
+        project={selectedProject} 
+        onClose={() => setSelectedProject(null)} 
+      />
     </StyledProjects>
   );
 };

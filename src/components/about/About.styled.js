@@ -284,5 +284,126 @@ export const TechName = styled.span`
    letter-spacing: 0.5px;
    margin-top: auto; /* Empuja el status al fondo de la tarjeta */
  `;
+
+ /* =========================================
+   5. SECCIÓN: EXPERIENCIA LABORAL
+   ========================================= */
+export const ExperienceContainer = styled(TechContainer)`
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+`;
+
+export const ExperienceTitle = styled(TechTitle)``;
+
+export const ExperienceList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+`;
+
+export const ExperienceCard = styled.div`
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: #e50914;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.15);
+  }
+
+  @media all and (max-width: 64rem) {
+    padding: 1.5rem;
+  }
+`;
+
+export const ExpHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permite que la fecha baje en móviles */
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+`;
+
+export const ExpTitleGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  .exp-icon {
+    font-size: 2.2rem;
+    color: #e50914; /* Icono del maletín en rojo */
+  }
+`;
+
+export const ExpTitle = styled.h4`
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.2;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+`;
+
+export const ExpCompany = styled.span`
+  font-size: 1.05rem;
+  color: #cccccc;
+  font-weight: 500;
+`;
+
+export const ExpDate = styled.span`
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #aaaaaa;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+`;
+
+export const ExpTasks = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 1rem;
+    color: #bbbbbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    /* Viñeta personalizada de color rojo */
+    &::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #e50914;
+      font-size: 1.3rem;
+      line-height: 1.3;
+    }
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+`;
 ;
 

@@ -23,18 +23,28 @@ import {
   EduIconWrapper,
   EduTitle,
   EduInstitution,
-  EduStatus
+  EduStatus,
+  ExperienceContainer,
+  ExperienceTitle,
+  ExperienceList,
+  ExperienceCard,
+  ExpHeader,
+  ExpTitleGroup,
+  ExpTitle,
+  ExpCompany,
+  ExpDate,
+  ExpTasks
 } from './About.styled';
 import { StyledParagraph } from './Typography.styled';
 
 import profileImg from '../../assets/img/profilee.jpg';
 import resume from '../../assets/img/CV_MartinMorondo.pdf';
 
-// Íconos para Tecnologías y Educación
+// Íconos para Tecnologías, Educación y Experiencia
 import { 
   SiHtml5, SiCss3, SiJavascript, SiReact, SiNodedotjs, SiExpress, SiPython 
 } from "react-icons/si";
-import { FaLaptopCode, FaGraduationCap, FaChartBar } from "react-icons/fa";
+import { FaLaptopCode, FaGraduationCap, FaChartBar, FaBriefcase } from "react-icons/fa";
 
 // Data del Stack
 const mySkills = [
@@ -69,6 +79,30 @@ const educationData = [
     status: "2do año (3er cuatrimestre)",
     icon: <FaChartBar />,
     highlight: false
+  }
+];
+
+// Data de Experiencia Laboral 
+const experienceData = [
+  {
+    title: "Desarrollador Front end",
+    company: "Grupo Saich",
+    date: "Marzo 2024 - Abril 2025",
+    tasks: [
+      "Desarrollo y mantenimiento de aplicaciones web escalables utilizando React.js y TypeScript, optimizando la arquitectura de componentes y el flujo de datos.",
+      "Implementación de interfaces responsivas y accesibles, traduciendo requerimientos de diseño en soluciones interactivas de alta fidelidad.",
+      "Gestión eficiente del código fuente y revisión de pares utilizando Git y GitHub, asegurando la calidad del software y el trabajo colaborativo."
+    ]
+  },
+  {
+    title: "Desarrollador Frontend Freelance",
+    company: "Independiente",
+    date: "Marzo 2022 - Febrero 2024",
+    tasks: [
+      "Diseño y desarrollo de sitios web responsivos para diversos clientes, utilizando tecnologías como HTML, CSS, JavaScript, Bootstrap y React.js.",
+      "Personalización de soluciones web según las necesidades y requisitos específicos de los clientes, asegurando la satisfacción y el cumplimiento estricto de plazos.",
+      "Optimización del rendimiento y velocidad de carga en sitios web, reduciendo los tiempos de respuesta e incrementando los puntajes en métricas de Core Web Vitals y Lighthouse."
+    ]
   }
 ];
 
@@ -131,6 +165,32 @@ export const About = () => {
           ))}
         </EducationGrid>
       </EducationContainer>
+
+      {/* SECCIÓN: Experiencia Laboral */}
+      <ExperienceContainer>
+        <ExperienceTitle>Experiencia Laboral</ExperienceTitle>
+        <ExperienceList>
+          {experienceData.map((exp, index) => (
+            <ExperienceCard key={index}>
+              <ExpHeader>
+                <ExpTitleGroup>
+                  <FaBriefcase className="exp-icon" />
+                  <div>
+                    <ExpTitle>{exp.title}</ExpTitle>
+                    <ExpCompany>{exp.company}</ExpCompany>
+                  </div>
+                </ExpTitleGroup>
+                <ExpDate>{exp.date}</ExpDate>
+              </ExpHeader>
+              <ExpTasks>
+                {exp.tasks.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ExpTasks>
+            </ExperienceCard>
+          ))}
+        </ExperienceList>
+      </ExperienceContainer>
 
     </AboutSection>
   );
