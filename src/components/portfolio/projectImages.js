@@ -8,6 +8,8 @@ import project16 from "../../assets/img/react-ecommerce.png";
 import projectSixteen from "../../assets/img/react-ecommerce-2.png";
 import project17 from "../../assets/img/chatbot-1.png";
 import projectSeventeen from "../../assets/img/chatbot-2.png";
+import projectProde from "../../assets/img/prode-1.png";
+import projectProdeTwo from "../../assets/img/prode-2.png";
 
 export {
     project2, projectTwo,
@@ -15,4 +17,5 @@ export {
     project15, projectFifteen,
     project16, projectSixteen,
     project17, projectSeventeen,
+    projectProde, projectProdeTwo,
 }
