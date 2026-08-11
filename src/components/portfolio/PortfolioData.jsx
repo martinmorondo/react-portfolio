@@ -1,55 +1,20 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiNodedotjs, SiExpress, SiPython } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact } from "react-icons/si";
 
 import {
-  project0, projectZero,
-  project1, projectOne,
   project2, projectTwo,
-  project3, projectThree,
-  project6, projectSix,
   project9, projectNine,
-  project11, projectEleven,
-  project12, projectTwelve,
-  project14, projectFourteen,
   project15, projectFifteen,
   project16, projectSixteen,
   project17, projectSeventeen,
 } from './projectImages';
 
 export const projectData = [
-    {
-        id: 0,
-        image: project0,
-        transitionImage: projectZero,
-        title: "Quiz App",
-        description: "Aplicación interactiva de preguntas y respuestas para evaluar conocimientos. Diseñada con un enfoque en la velocidad y la experiencia de usuario.",
-        techStack: [
-          { name: "HTML5", icon: <SiHtml5 /> },
-          { name: "CSS3", icon: <SiCss3 /> },
-          { name: "JavaScript", icon: <SiJavascript /> }
-        ],
-        codeLink: "https://github.com/martinmorondo/Quiz-app",
-        liveLink: "https://marvelous-lamington-597fcd.netlify.app/",
-      },
-      {
-        id: 1,
-        image: project1,
-        transitionImage: projectOne,
-        title: "Whack a mole game",
-        description: "Clásico juego arcade desarrollado enteramente con lógica de JavaScript puro para manipulación del DOM y manejo de eventos.",
-        techStack: [
-          { name: "HTML5", icon: <SiHtml5 /> },
-          { name: "CSS3", icon: <SiCss3 /> },
-          { name: "JavaScript", icon: <SiJavascript /> }
-        ],
-        codeLink: "https://github.com/martinmorondo/Whack-a-mole-game",
-        liveLink: "https://marvelous-lamington-597fcd.netlify.app/",
-      },
       {
         id: 2,
         image: project2,
         transitionImage: projectTwo,
         title: "Own Webpage",
-        description: "Directorio de recursos gratuitos para programadores que centraliza cursos, libros y documentaciones útiles.",
+        description: "Directorio de recursos gratuitos para programadores que centraliza cursos, libros y documentaciones útiles. Diseño enfocado en la accesibilidad de la información.",
         techStack: [
           { name: "React", icon: <SiReact /> }, 
           { name: "CSS3", icon: <SiCss3 /> }, 
@@ -59,58 +24,30 @@ export const projectData = [
         liveLink: "https://recursosparaprogramadores.netlify.app/",
       },
       {
-        id: 3,
-        image: project3,
-        transitionImage: projectThree,
-        title: "JS Puzzle",
-        codeLink: "https://github.com/martinmorondo/Puzzle",
-        liveLink: "https://magical-sprinkles-54dc75.netlify.app/",
-      },
-      {
-        id: 6,
-        image: project6,
-        transitionImage: projectSix,
-        title: "JS Ecommerce",
-        codeLink: "https://github.com/martinmorondo/Ecommerce",
-        liveLink: "https://mellifluous-cupcake-82cef1.netlify.app/",
-      },
-      {
         id: 9,
         image: project9,
         transitionImage: projectNine,
         title: "React Gym",
+        description: "Landing page interactiva para centro de entrenamiento enfocada en la conversión y UI/UX. Completamente responsiva y optimizada para alto rendimiento.",
+        techStack: [
+          { name: "React", icon: <SiReact /> }, 
+          { name: "CSS3", icon: <SiCss3 /> }, 
+          { name: "JavaScript", icon: <SiJavascript /> }
+        ],
         codeLink: "https://github.com/martinmorondo/react-gym",
         liveLink: "https://helpful-halva-c2f9db.netlify.app/",
-      },
-      {
-        id: 11,
-        image: project11,
-        transitionImage: projectEleven,
-        title: "React Grocery Budget",
-        codeLink: "https://github.com/martinmorondo/react-grocery-budget-",
-        liveLink: "https://tourmaline-jalebi-9f1956.netlify.app/",
-      },
-      {
-        id: 12,
-        image: project12,
-        transitionImage: projectTwelve,
-        title: "React Tours",
-        codeLink: "https://github.com/martinmorondo/react-tours",
-        liveLink: "https://iridescent-bienenstitch-08c89c.netlify.app/",
-      },
-      {
-        id: 14,
-        image: project14,
-        transitionImage: projectFourteen,
-        title: "Reflex Game",
-        codeLink: "https://github.com/martinmorondo/reflex-game",
-        liveLink: "https://sparkly-dolphin-dea9fa.netlify.app/",
       },
       {
         id: 15,
         image: project15,
         transitionImage: projectFifteen,
         title: "React Shopping",
+        description: "Aplicación de carrito de compras con gestión de estado dinámica. Permite al usuario interactuar con productos, modificar cantidades y calcular totales en tiempo real.",
+        techStack: [
+          { name: "React", icon: <SiReact /> }, 
+          { name: "CSS3", icon: <SiCss3 /> }, 
+          { name: "JavaScript", icon: <SiJavascript /> }
+        ],
         codeLink: "https://github.com/martinmorondo/react-shopping-cart",
         liveLink: "https://fastidious-cendol-ad104b.netlify.app/",
       },
@@ -119,6 +56,12 @@ export const projectData = [
         image: project16,
         transitionImage: projectSixteen,
         title: "React Ecommerce",
+        description: "Plataforma de comercio electrónico con catálogo de productos, filtros dinámicos por categoría y arquitectura de componentes escalable.",
+        techStack: [
+          { name: "React", icon: <SiReact /> }, 
+          { name: "CSS3", icon: <SiCss3 /> }, 
+          { name: "JavaScript", icon: <SiJavascript /> }
+        ],
         codeLink: "https://github.com/martinmorondo/react-ecommerce",
         liveLink: "https://lively-dasik-84407c.netlify.app/",
       },
@@ -127,6 +70,12 @@ export const projectData = [
         image: project17,
         transitionImage: projectSeventeen,
         title: "React Chatbot",
+        description: "Interfaz conversacional (Chatbot) desarrollada para ofrecer respuestas interactivas. Demuestra integración de flujos de conversación y manejo de estado complejo en UI.",
+        techStack: [
+          { name: "React", icon: <SiReact /> }, 
+          { name: "CSS3", icon: <SiCss3 /> }, 
+          { name: "JavaScript", icon: <SiJavascript /> }
+        ],
         codeLink: "https://github.com/martinmorondo/portfolio-chatbot",
         liveLink: "https://bucolic-praline-a0d151.netlify.app/",
       },
