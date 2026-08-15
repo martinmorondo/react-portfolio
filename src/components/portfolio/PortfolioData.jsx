@@ -1,7 +1,8 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiFirebase, SiTailwindcss } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiFirebase, SiTailwindcss, SiBootstrap, SiPhp } from "react-icons/si";
 
 import {
   projectProde, projectProdeTwo,
+  projectSaich, projectSaichTwo,
   project2, projectTwo,
   project9, projectNine,
   project15, projectFifteen,
@@ -21,8 +22,22 @@ export const projectData = [
           { name: "Tailwind", icon: <SiTailwindcss /> }, 
           { name: "Firebase", icon: <SiFirebase /> }
         ],
-        codeLink: "https://github.com/martinmorondo/prode-mundial-2026", // Pon tu link real o borra esta línea si es privado
+        codeLink: "https://github.com/martinmorondo/prode-mundial-2026",
         liveLink: "https://prode-mundial-2026-pi-umber.vercel.app/",
+      },
+      {
+        id: 19,
+        image: projectSaich,
+        transitionImage: projectSaichTwo,
+        title: "Saich Edition",
+        description: "Plataforma web corporativa para agencia de soluciones digitales. Desarrollo integral enfocado en optimización SEO, animaciones interactivas fluidas y posicionamiento de identidad comercial.",
+        techStack: [
+          { name: "JavaScript", icon: <SiJavascript /> }, 
+          { name: "Bootstrap", icon: <SiBootstrap /> }, 
+          { name: "PHP", icon: <SiPhp /> }
+        ],
+        codeLink: "https://github.com/martinmorondo/saich-edition-arg", 
+        liveLink: "https://saich-edition-arg.vercel.app/", 
       },
       {
         id: 16,

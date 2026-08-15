@@ -10,6 +10,8 @@ import project17 from "../../assets/img/chatbot-1.png";
 import projectSeventeen from "../../assets/img/chatbot-2.png";
 import projectProde from "../../assets/img/prode-1.png";
 import projectProdeTwo from "../../assets/img/prode-2.png";
+import projectSaich from "../../assets/img/saich-1.png";
+import projectSaichTwo from "../../assets/img/saich-2.png";
 
 export {
     project2, projectTwo,
@@ -18,4 +20,5 @@ export {
     project16, projectSixteen,
     project17, projectSeventeen,
     projectProde, projectProdeTwo,
+    projectSaich, projectSaichTwo,
 }
