@@ -1,11 +1,10 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiFirebase, SiTailwindcss, SiBootstrap, SiPhp } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiFirebase, SiTailwindcss, SiBootstrap, SiPhp, SiTypescript } from "react-icons/si";
 
 import {
   projectProde, projectProdeTwo,
   projectSaich, projectSaichTwo,
   project2, projectTwo,
   project9, projectNine,
-  project15, projectFifteen,
   project16, projectSixteen,
   project17, projectSeventeen,
 } from './projectImages';
@@ -43,12 +42,12 @@ export const projectData = [
         id: 16,
         image: project16,
         transitionImage: projectSixteen,
-        title: "React Ecommerce",
-        description: "Plataforma de comercio electrónico con catálogo de productos, filtros dinámicos por categoría y arquitectura de componentes escalable.",
+        title: "NEXORA Ecommerce",
+        description: "Plataforma frontend escalable construida con TypeScript y Zustand. Cuenta con catálogo dinámico, persistencia de carrito, filtros cruzados en tiempo real y simulación de flujo de checkout completo.",
         techStack: [
           { name: "React", icon: <SiReact /> }, 
-          { name: "CSS3", icon: <SiCss3 /> }, 
-          { name: "JavaScript", icon: <SiJavascript /> }
+          { name: "TypeScript", icon: <SiTypescript /> }, 
+          { name: "Tailwind", icon: <SiTailwindcss /> }
         ],
         codeLink: "https://github.com/martinmorondo/react-ecommerce",
         liveLink: "https://lively-dasik-84407c.netlify.app/",
@@ -80,20 +79,6 @@ export const projectData = [
         ],
         codeLink: "https://github.com/martinmorondo/react-gym",
         liveLink: "https://helpful-halva-c2f9db.netlify.app/",
-      },
-      {
-        id: 15,
-        image: project15,
-        transitionImage: projectFifteen,
-        title: "React Shopping",
-        description: "Aplicación de carrito de compras con gestión de estado dinámica. Permite al usuario interactuar con productos, modificar cantidades y calcular totales en tiempo real.",
-        techStack: [
-          { name: "React", icon: <SiReact /> }, 
-          { name: "CSS3", icon: <SiCss3 /> }, 
-          { name: "JavaScript", icon: <SiJavascript /> }
-        ],
-        codeLink: "https://github.com/martinmorondo/react-shopping-cart",
-        liveLink: "https://fastidious-cendol-ad104b.netlify.app/",
       },
       {
         id: 2,
