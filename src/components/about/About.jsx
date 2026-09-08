@@ -82,8 +82,17 @@ const educationData = [
   }
 ];
 
-// Data de Experiencia Laboral 
+// Data de Experiencia Laboral
 const experienceData = [
+  {
+    title: "Desarrollador Full Stack",
+    company: "Flavour Agency",
+    date: "Mayo 2025 - Mayo 2026",
+    tasks: [
+      "Desarrollo de aplicaciones web y tiendas online, integrando interfaces en React con servicios backend y bases de datos.",
+      "Creación y consumo de APIs REST, optimizando la lógica del servidor y la velocidad de respuesta para soportar picos de tráfico en campañas de marketing."
+    ]
+  },
   {
     title: "Desarrollador Front end",
     company: "Grupo Saich",
